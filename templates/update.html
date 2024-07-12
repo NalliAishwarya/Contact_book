@@ -1,0 +1,131 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+     Add other head elements as needed 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     Other CSS files and stylesheets 
+</head>
+<body>
+
+
+<h4>Update record</h4>
+
+<div class="insertc">
+    <form class="row g-3" action="" method="POST">
+        {% csrf_token %}
+        <div class="col-md-6">
+            <label for="inputUsername" class="form-label">Name</label>
+            {{ form.username }}
+        </div>
+        <div class="col-md-6">
+            <label for="inputEmail" class="form-label">Email</label>
+            {{ form.email }}
+        </div>
+        <div class="col-12">
+            <label for="inputAddress" class="form-label">Address</label>
+            {{ form.address }}
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-success">Update Record</button>
+        </div>
+    </form>
+    <div>
+        <a href="{% url 'profile' user_id=user_id %}">
+            <button type="button" class="btn btn-success">Show Details</button>
+        </a>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Add other head elements as needed -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Other CSS files and stylesheets -->
+    <style>
+
+    html, body {
+        height: 100%;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-image: url('https://content-writing-india.com/images/content-writing-company.jpg');
+        background-size: cover;
+    }
+
+    .form-container {
+        width: 400px;
+        border: 1px solid #1E90FF;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    label {
+        color: #00008B;
+        font-weight: bold;
+    }
+
+    .btn {
+        color: white;
+    }
+
+    .btn-success {
+        background-color: #0000CD;
+        border-color: #0000CD;
+    }
+
+    .btn-success:hover {
+        background-color: #1E90FF;
+        border-color: #1E90FF;
+    }
+
+    </style>
+</head>
+<body>
+
+<div id="background-container">
+    <div class="container mt-5 form-container">
+        <h4 style="text-align: center;">Update record</h4>
+        <div>&nbsp</div>
+        <div class="insertc">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="inputUsername">Name</label>
+                    {{ form.username }}
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail">Email</label>
+                    {{ form.email }}
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    {{ form.address }}
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Update Record</button>
+                </div>
+            </form>
+            <div class="mt-3">
+                <a href="{% url 'profile' user_id=user_id %}" class="btn btn-success">Show Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Bootstrap JS script below -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

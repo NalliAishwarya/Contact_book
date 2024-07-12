@@ -1,0 +1,356 @@
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+    Add Bootstrap CSS 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-info" role="alert">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    <div class="container">
+        <h1 class="mt-5">User Registration</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="username" class="form-label">Username:</label>
+                {{ form.username }}
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                {{ form.email }}
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password:</label>
+                {{ form.password }}
+            </div>
+            <div class="mb-3">
+                <label for="repassword" class="form-label">RePassword:</label>
+                {{ form.repassword }}
+            </div>
+            <div class="mb-3">
+                <label for="photo" class="form-label">Upload Your Photo:</label>
+                {{ form.photo }}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+
+     Add Bootstrap JS (optional if you need Bootstrap features like dropdowns, modals, etc.) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>  -->
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+      Add Bootstrap CSS  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333333; /* Dark Gray Background Color */
+            font-family: Arial, sans-serif; /* Change Font Style */
+        }
+
+        .container {
+            max-width: 500px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #00a74a; /* Green Title Color */
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #00a74a; /* Green Form Label Color */
+        }
+
+        .btn-primary {
+            background-color: #00a74a; /* Green Button Background Color */
+            border-color: #00a74a; /* Green Button Border Color */
+        }
+
+        .btn-primary:hover {
+            background-color: #008c3a; /* Darker Green Button Background Color */
+            border-color: #008c3a; /* Darker Green Button Border Color */
+        }
+
+        /* Ensure all input boxes have the same alignment */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #00a74a; /* Green Border Color */
+            border-radius: 4px;
+            background-color: #f3f3f3;
+            margin-bottom: 15px;
+            color: #000000; /* Black Font Color */
+        }
+    </style>
+</head>
+<body>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-info" role="alert">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    <div class="container">
+        <h1>User Registration</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="username" class="form-label">Username:</label>
+                {{ form.username }}
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                {{ form.email }}
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password:</label>
+                {{ form.password }}
+            </div>
+            <div class="mb-3">
+                <label for="repassword" class="form-label">RePassword:</label>
+                {{ form.repassword }}
+            </div>
+            <div class="mb-3">
+                <label for="photo" class="form-label">Upload Your Photo:</label>
+                {{ form.photo }}
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+    </div>
+
+      Add Bootstrap JS (optional if you need Bootstrap features like dropdowns, modals, etc.)  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+     Add Bootstrap CSS 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('/pictures/regback.jpg'); /* Replace 'your-image-url.jpg' with the actual URL of your background image */
+            background-size: cover;
+            font-family: Arial, sans-serif; /* Change Font Style */
+        }
+
+        .container {
+            max-width: 500px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #00a74a; /* Green Title Color */
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #00a74a; /* Green Form Label Color */
+        }
+
+        .btn-primary {
+            background-color: #00a74a; /* Green Button Background Color */
+            border-color: #00a74a; /* Green Button Border Color */
+        }
+
+        .btn-primary:hover {
+            background-color: #008c3a; /* Darker Green Button Background Color */
+            border-color: #008c3a; /* Darker Green Button Border Color */
+        }
+
+        /* Ensure all input boxes have the same alignment */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #00a74a; /* Green Border Color */
+            border-radius: 4px;
+            background-color: #f3f3f3;
+            margin-bottom: 15px;
+            color: #000000; /* Black Font Color */
+        }
+    </style>
+</head>
+<body>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-info" role="alert">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    <div class="container">
+        <h1>User Registration</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="username" class="form-label">Username:</label>
+                {{ form.username }}
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                {{ form.email }}
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password:</label>
+                {{ form.password }}
+            </div>
+            <div class="mb-3">
+                <label for="repassword" class="form-label">RePassword:</label>
+                {{ form.repassword }}
+            </div>
+            <div class="mb-3">
+                <label for="photo" class="form-label">Upload Your Photo:</label>
+                {{ form.photo }}
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+    </div>
+
+     Add Bootstrap JS (optional if you need Bootstrap features like dropdowns, modals, etc.) 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+    <!-- Add Bootstrap CSS  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://content-writing-india.com/images/content-writing-company.jpg'); /* Replace with the actual image link */
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif; /* Change Font Style */
+            color: blue; /* Set the font color to blue */
+        }
+
+        .container {
+            max-width: 500px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: darkblue; /* Set the font color to dark blue */
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: darkblue; /* Set the font color to dark blue */
+        }
+
+        .btn-primary {
+            background-color: #00a74a; /* Green Button Background Color */
+            border-color: #00a74a; /* Green Button Border Color */
+        }
+
+        .btn-primary:hover {
+            background-color: #008c3a; /* Darker Green Button Background Color */
+            border-color: #008c3a; /* Darker Green Button Border Color */
+        }
+
+        /* Ensure all input boxes have the same alignment */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid black; /* Set the border color to black */
+            border-radius: 4px;
+            background-color: #f3f3f3;
+            margin-bottom: 15px;
+            color: blue; /* Set the font color to blue */
+        }
+    </style>
+</head>
+<body>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-info" role="alert">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    <div class="container">
+        <h1>User Registration</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="username" class="form-label">Username:</label>
+                {{ form.username }}
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                {{ form.email }}
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password:</label>
+                {{ form.password }}
+            </div>
+            <div class="mb-3">
+                <label for="repassword" class="form-label">RePassword:</label>
+                {{ form.repassword }}
+            </div>
+            <div class="mb-3">
+                <label for="photo" class="form-label">Upload Your Photo:</label>
+                {{ form.photo }}
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+    </div>
+
+    <!-- Add Bootstrap JS (optional if you need Bootstrap features like dropdowns, modals, etc.)  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!-- search_results.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    {% if contacts %}
+    <ul>
+        {% for contact in contacts %}
+            <li>
+                <p>Name: {{ contact.username }}</p>
+                <p>Email: {{ contact.email }}</p>
+                <p>Address: {{ contact.address }}</p>
+                <!-- Add other contact details here -->
+            </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No matching contacts found.</p>
+    {% endif %}
+    <button onclick="closePopup()">Close</button>
+
+    <!-- JavaScript function to close the popup -->
+    <script>
+        function closePopup() {
+            window.close();
+        }
+    </script>
+</body>
+</html>
